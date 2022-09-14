@@ -1,6 +1,20 @@
 # ********************CULTURA GENERAL *****************
+BLACK = '\033[30m'
+RED = '\033[31m'
+GREEN = '\033[32m'
+YELLOW = '\033[33m'
+BLUE = '\033[34m'
+MAGENTA = '\033[35m'
+CYAN = '\033[36m'
+WHITE = '\033[37m'
+RESET = '\033[39m'
 
-print('****************TRIVIA DE CULTURA GENERAL*************')
+print('****************TRIVIA DE CULTURA GENERAL*************\n')
+print('Bievenidos a mi trivi sobre CULTURA GENERAL DEL PERÚ')
+print('Podremos a prueba tus conocimiento \n')
+
+name =input('Ingres tu nombre:')
+print(f" Hola, {name}, reponde las sigientes preguntas escribiendo la letra de la alternativa y presione Enter para enviar tu respuesta!....")
 
 questions={
 1:'¿Cuál es el nombre oficial del país? \na) Estados peruanos\nb) República del Perú \nc) Reino del Perú\nd) Estado del Perú',
@@ -52,7 +66,7 @@ while y<=len(questions):
         print('\n')
 
 
-print('''
+print(f'''
 Puntaje obtenido: {co} \n
-Respuesta incorrectas: {inco}
+Respuesta incorrectas: {inc}
 ''')
