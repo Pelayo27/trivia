@@ -9,13 +9,13 @@ CYAN = '\033[36m'
 WHITE = '\033[37m'
 RESET = '\033[39m'
 
-print('****************TRIVIA DE CULTURA GENERAL*************\n')
+print('****************'+ RED +'TRIVIA DE CULTURA GENERAL' +RESET+ '*************\n')
 print('Bievenidos a mi trivi sobre CULTURA GENERAL DEL PERÚ')
 print('Podremos a prueba tus conocimiento \n')
 
 name =input('Ingres tu nombre:')
-print(f" Hola, {name}, reponde las sigientes preguntas escribiendo la letra de la alternativa y presione Enter para enviar tu respuesta!....")
-
+print(f" \nHola, {name}, reponde las sigientes preguntas escribiendo la letra de la alternativa y presione Enter para enviar tu respuesta!....")
+print(BLUE)
 questions={
 1:'¿Cuál es el nombre oficial del país? \na) Estados peruanos\nb) República del Perú \nc) Reino del Perú\nd) Estado del Perú',
 2:'¿Contra cuál país se enfrentó Perú en la Guerra del Pacífico? \na) Bolivia\nb) Argentina \nc) Ecuador \nd) Chile',
