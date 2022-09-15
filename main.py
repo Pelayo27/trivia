@@ -46,27 +46,31 @@ def seleccionarRespuesta(r):
         rep={'error':'La opción eligido no es correcto'}
     return rep
 y=0
-co=0
-inc=0
-input('Enter para continuar')
-while y<=len(questions):
-    mostrarPreguntas(y+1)
-    print('\n')
-    select=seleccionarRespuesta(y)
-    if select.get('success') or select.get('incorrect'):
-        if select.get('success'):
-            print(select['success'])
-            co+=5
-        else:
-            print(select['incorrect'])
-            inc+=1
-        y+=1
-    else:
-        print(select['error'])
+puntaje=0
+decuento=0
+input('Enter para continuar \n')
+try:
+    while y<len(questions):
+        mostrarPreguntas(y+1)
         print('\n')
+        select=seleccionarRespuesta(y)
+        if select.get('success') or select.get('incorrect'):
+            if select.get('success'):
+                print(select['success'])
+                puntaje+=5
+            else:
+                print(select['incorrect'])
+                decuento+=1
+            y+=1
+        else:
+            print(select['error'])
+            print('\n')
+            y=y
+except:
+    print(RED+'Pasó un error inesperado')
 
 
-print(f'''
-Puntaje obtenido: {co} \n
-Respuesta incorrectas: {inc}
+print(f''' {CYAN}
+Puntaje obtenido: {puntaje-decuento} \n
+Respuesta incorrectas: {decuento}
 ''')
